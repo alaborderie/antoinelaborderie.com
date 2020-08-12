@@ -6,3 +6,43 @@ body {
 a {
   color: #00B7FF;
 }
+
+div.error-page {
+  font-family: 'Anton', sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-image: url('/images/doge.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(195, 159, 87);
+  background-position: center;
+  padding-top: 60px;
+  padding-left: 32px;
+}
+
+div.error-page h1 {
+  font-size: 82px;
+}
+
+div.error-page h2 {
+  font-size: 45px;
+}
+
+div.opacity-background {
+  opacity: 0;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.z-index-1 {
+  z-index: 1;
+}

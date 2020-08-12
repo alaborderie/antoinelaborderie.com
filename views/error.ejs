@@ -1,3 +1,12 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<head>
+    <title>antoinelaborderie.com - Error</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<div class="error-page">
+    <div class="opacity-background"></div>
+    <div class="z-index-1">
+        <h1>wow such error</h1>
+        <h2><%= error.status %> <%= message %></h2>
+    </div>
+</div>
