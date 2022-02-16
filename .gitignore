@@ -2,4 +2,5 @@
 # Added by cargo
 debug/
 target/
-dist/
+# Do not ignore dist for scalingo
+# dist/
