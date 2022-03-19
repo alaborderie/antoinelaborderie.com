@@ -1,6 +1,6 @@
 mod components;
 use components::{
-    AppContainer::AppContainer, NavBar::NavBar, Hero::Hero, Footer::Footer
+    AppContainer::AppContainer, NavBar::NavBar, Hero::Hero, Skills::Skills, Footer::Footer
 };
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -17,11 +17,10 @@ enum Route {
 fn switch(routes: &Route) -> Html {
     match routes {
         Route::Home => html! {
-            <AppContainer>
-                <NavBar />
+            <>
                 <Hero />
-                <Footer />
-            </AppContainer>
+                <Skills />
+            </>
         },
         Route::NotFound => html! { <h1>{ "404" }</h1> },
     }
@@ -37,10 +36,14 @@ impl Component for App {
         App 
     }
 
-    fn view(&self, ctx: &Context<Self>) -> Html {
+    fn view(&self, _ctx: &Context<Self>) -> Html {
         html! {
             <BrowserRouter>
-                <Switch<Route> render={Switch::render(switch)} />
+                <NavBar />
+                <AppContainer>
+                    <Switch<Route> render={Switch::render(switch)} />
+                </AppContainer>
+                <Footer />
             </BrowserRouter>
         }
     }

@@ -7,7 +7,7 @@ pub fn footer() -> Html {
         <div class={css!(r#"
             width: 100%;
             height: 200px;
-            background-color: #2d2d2d;
+            background-color: #303136;
             display: flex;
             flex-direction: column;
             justify-content: center;

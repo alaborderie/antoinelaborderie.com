@@ -1,5 +1,5 @@
-use crate::{Route};
-use stylist::yew::{styled_component};
+use crate::Route;
+use stylist::yew::styled_component;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -8,9 +8,10 @@ pub fn nav_bar() -> Html {
     html! {
         <div class={css!(r#"
             width: 100%;
-            height: 50px;
-            background-color: #2d2d2d;
+            height: 75px;
+            background-color: #202124;
             display: flex;
+            position: sticky;
             justify-content: flex-start;
             align-items: center;
 
@@ -22,6 +23,8 @@ pub fn nav_bar() -> Html {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-transform: uppercase;
+                text-decoration: none;
             }
         "#)}>
             <Link<Route> to={Route::Home}>{ "Home" }</Link<Route>>
